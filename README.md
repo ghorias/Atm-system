@@ -5,9 +5,9 @@ Projektet går ut på att bygga ett komplett, säkert och användarvänligt ATM-
 
 ## MVP (Minimum Viable Product)
 Vår MVP fokuserar på kärnlogiken för en säker bankomat och består av:
-* **Inloggning:** Säker autentisering med kontonummer och PIN (hashad med BCrypt).
+* **Inloggning:** Simpel enkel inloggning utan lösenord.
 * **Transaktioner:** Grundläggande logik för att se saldo, sätta in pengar och ta ut pengar (med validering mot negativt saldo).
-* **Persistens:** All data sparas i en SQLite-databas så att saldon finns kvar vid omstart.
+* **Persistens:** Hårdkodad Data.
 * **Fullstack-koppling:** En enkel React-frontend som kommunicerar med en Spring Boot-backend via ett REST API.
 * **Trådsäkerhet:** Implementering av grundläggande transaktionshantering (`@Transactional`) för att säkerställa dataintegritet.
 
