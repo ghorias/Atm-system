@@ -31,5 +31,4 @@ Så när en person vill ta ut pengar sker detta i serivce:
 2. kollar om det finns 100kr på saldot (logik)
 3. räknar ut det nya saldot
 4. sparar det.
-## model-paketen
 
