@@ -65,15 +65,7 @@ public class Account {
     public Account(){
 
     }
-
-    public void withdraw(BigDecimal saldo, BigDecimal withdrawPrompt){
-        saldo = saldo - withdrawPrompt;
-    }
-
-    public void deposit(){
-
-    }
-
+    
 
 
 }
