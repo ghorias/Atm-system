@@ -59,9 +59,21 @@ public class Account {
         this.lösenordHash = lösenord;
     }
 
+    //tom konstruktor för JPA systemet
+    //Med tom konstruktor kan JPA skapa ett Account-objekt utan att jag själv skickar in värden
+    //den behövs också för att fylla i fälten efteråt från databasen
     public Account(){
 
     }
+
+    public void withdraw(BigDecimal saldo, BigDecimal withdrawPrompt){
+        saldo = saldo - withdrawPrompt;
+    }
+
+    public void deposit(){
+
+    }
+
 
 
 }
