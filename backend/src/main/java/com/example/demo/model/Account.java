@@ -1,9 +1,5 @@
 package com.example.demo.model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
 
 import java.math.BigDecimal;
 
@@ -23,13 +19,20 @@ public class Account {
     //Boilerplate
     //getters
     public String getKontonummer() {
+
         return kontonummer;
     }
 
     private BigDecimal getSaldo() {
+
         return saldo;
     }
 
+    public void setSaldo(BigDecimal saldo) {
+        this.saldo = saldo;
+    }
 
-
+    public void setKontonummer(String kontonummer) {
+        this.kontonummer = kontonummer;
+    }
 }

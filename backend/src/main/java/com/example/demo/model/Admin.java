@@ -2,27 +2,27 @@ package com.example.demo.model;
 
 public class Admin {
 
-    private String FirstName;
-    private String LastName;
+    private String firstName;
+    private String lastName;
     private String Mail;
     private String Adress;
     private long personnummer;
     private long AdminID; //primarykey
 
     public String getLastName() {
-        return LastName;
+        return lastName;
     }
 
     public void setLastName(String lastName) {
-        LastName = lastName;
+        lastName = lastName;
     }
 
     public String getFirstName() {
-        return FirstName;
+        return firstName;
     }
 
     public void setFirstName(String firstName) {
-        FirstName = firstName;
+        firstName = firstName;
     }
 
     public String getMail() {
@@ -58,8 +58,8 @@ public class Admin {
     }
 
     public Admin(String firstName, String lastName, String mail, String adress, long personnummer, long adminID) {
-        FirstName = firstName;
-        LastName = lastName;
+        firstName = firstName;
+        lastName = lastName;
         Mail = mail;
         Adress = adress;
         this.personnummer = personnummer;

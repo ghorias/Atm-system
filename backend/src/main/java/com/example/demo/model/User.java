@@ -3,26 +3,35 @@ package com.example.demo.model;
 public class User {
 
     //fält
-    private String FirstName;
-    private String LastName;
+    private String firstName;
+    private String lastName;
     private String Mail;
     private String Adress;
     private long personnummer; //primary key??
+    private long userId;
+
+    public long getUserId() {
+        return userId;
+    }
+
+    public void setUserId(long userId) {
+        this.userId = userId;
+    }
 
     public String getFirstName() {
-        return FirstName;
+        return firstName;
     }
 
     public void setFirstName(String firstName) {
-        FirstName = firstName;
+        firstName = firstName;
     }
 
     public String getLastName() {
-        return LastName;
+        return lastName;
     }
 
     public void setLastName(String lastName) {
-        LastName = lastName;
+        lastName = lastName;
     }
 
     public String getMail() {
@@ -50,8 +59,8 @@ public class User {
     }
 
     public User(String firstName, String lastName, String mail, String adress, long personnummer) {
-        FirstName = firstName;
-        LastName = lastName;
+        firstName = firstName;
+        lastName = lastName;
         Mail = mail;
         Adress = adress;
         this.personnummer = personnummer;
