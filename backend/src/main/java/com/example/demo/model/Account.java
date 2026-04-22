@@ -1,38 +1,33 @@
 package com.example.demo.model;
-
-
 import java.math.BigDecimal;
 
 
-//Denna klass är själva objektet.
+
 
 public class Account {
-    //fält
+    //field
 
-    private String kontonummer;//affärsidentitet är kontonummer
-    private BigDecimal saldo;
+    private String accountNumber;//affärsidentitet är kontonummer
+    private BigDecimal balance;
 
-
-    //Annoteringar, för databas bör vi spara data i med denna klass
-    //med @Entity kolla up det och @Id vad de gör. De ska sitta ovanför klassnamnet resp ID-variabler
 
     //Boilerplate
     //getters
-    public String getKontonummer() {
+    public String getAccountNumber() {
 
-        return kontonummer;
+        return accountNumber;
     }
 
     private BigDecimal getSaldo() {
 
-        return saldo;
+        return balance;
     }
 
     public void setSaldo(BigDecimal saldo) {
-        this.saldo = saldo;
+        this.balance = saldo;
     }
 
     public void setKontonummer(String kontonummer) {
-        this.kontonummer = kontonummer;
+        this.accountNumber = kontonummer;
     }
 }
