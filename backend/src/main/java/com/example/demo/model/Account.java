@@ -18,13 +18,13 @@ public class Account {
         return accountNumber;
     }
 
-    private BigDecimal getSaldo() {
+    private BigDecimal getBalance() {
 
         return balance;
     }
 
-    public void setSaldo(BigDecimal saldo) {
-        this.balance = saldo;
+    public void setBalance(BigDecimal balance) {
+        this.balance = balance;
     }
 
     public void setKontonummer(String kontonummer) {
