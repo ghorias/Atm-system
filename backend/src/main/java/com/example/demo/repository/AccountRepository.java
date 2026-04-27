@@ -19,7 +19,7 @@ public class AccountRepository {
     }
 // This method retrieves an Account object from the database based on the provided account number (accountNumber).
       public Account findByAccountNumber(String accountNumber) {
-        String sql = "SELECT * FROM accounts WHERE kontonummer = ?";
+        String sql = "SELECT * FROM accounts WHERE accountNumber = ?";
         List<Account> result = jdbcTemplate.query(sql, rowMapper, accountNumber);
         return result.isEmpty() ? null : result.get(0);
     }
