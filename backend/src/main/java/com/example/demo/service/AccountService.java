@@ -25,8 +25,8 @@ public class AccountService {
 
         account.setBalance(newBalance);
 
-        //Here we save the new balance.
-        accountRepository.update(account);
+        //Here we save the new balance. updateBalance method comes from the AccountRepository
+        accountRepository.updateBalance(account.getAccountNumber(), newBalance);
 
        return newBalance;
     }
@@ -42,14 +42,14 @@ public class AccountService {
             throw new IllegalArgumentException("Insufficient balance");
         }
         newBalance = balance.subtract(amount);
-
-        accountRepository.update(account);
+        account.setBalance(newBalance);
+        accountRepository.updateBalance(account.getAccountNumber(), newBalance);
 
         return newBalance;
 
     }
 
-    public BigDecimal showBalance(String Account){
+    public BigDecimal showBalance(String accountNumber){
         return accountRepository.findByAccountNumber(accountNumber).getBalance();
 
 

@@ -18,7 +18,7 @@ public class Account {
         return accountNumber;
     }
 
-    private BigDecimal getBalance() {
+    public BigDecimal getBalance() {
 
         return balance;
     }
