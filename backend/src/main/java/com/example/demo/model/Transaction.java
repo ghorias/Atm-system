@@ -19,7 +19,7 @@ public class Transaction {
     private LocalDateTime timeStamp;
 
     //Which type of transaction was made, either a Deposit or Withdrawal
-    private enum TransactionType{
+    public enum TransactionType{
         DEPOSIT, WITHDRAWAL
     }
 
