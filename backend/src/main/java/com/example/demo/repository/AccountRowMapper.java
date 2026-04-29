@@ -10,8 +10,8 @@ public class AccountRowMapper implements RowMapper<Account> {
     public Account mapRow(ResultSet rs, int rowNum) throws SQLException {
         Account account = new Account(); // Create a new Account object
 
-        account.setKontonummer(rs.getString("kontonummer")); // Set the account number from the result set
-        account.setSaldo(rs.getBigDecimal("saldo")); // Set the balance from the result set
+        account.setaccountnumber(rs.getString("accountnumber")); // Set the account number from the result set
+        account.setBalance(rs.getBigDecimal("balance")); // Set the balance from the result set
 
         return account;
     }

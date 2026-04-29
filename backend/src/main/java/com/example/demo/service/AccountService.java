@@ -33,9 +33,9 @@ public class AccountService {
 
 
     public BigDecimal withdraw(String accountNumber, BigDecimal amount){
-        Account account = accountRepository.findByAccountNumber(accountNumber);
+        Account account = accountRepository.findByaccountNumber(accountNumber);
         BigDecimal newBalance;
-        BigDecimal balance = accountRepository.findByAccountNumber(accountNumber).getBalance();
+        BigDecimal balance = accountRepository.findByaccountNumber(accountNumber).getBalance();
 
 
         if(amount.compareTo(balance) > 0){
