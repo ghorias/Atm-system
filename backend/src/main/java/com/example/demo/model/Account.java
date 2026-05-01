@@ -27,7 +27,7 @@ public class Account {
         this.balance = balance;
     }
 
-    public void setKontonummer(String kontonummer) {
-        this.accountNumber = kontonummer;
+    public void setAccountNumber (String accountNumber) {
+        this.accountNumber = accountNumber;
     }
 }

@@ -7,5 +7,8 @@ public class TransactionRepository {
 
     //fält
     private final JdbcTemplate jdbcTemplate;
-    
+
+    public TransactionRepository(JdbcTemplate jdbcTemplate) {
+        this.jdbcTemplate = jdbcTemplate;
+    }
 }

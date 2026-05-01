@@ -40,6 +40,11 @@
 
 		<!-- BCrypt för PIN-hashing -->
 
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jdbc</artifactId>
+		</dependency>
+
 		<!-- Tester -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -57,3 +62,4 @@
 		</plugins>
 	</build>
 </project>
+
