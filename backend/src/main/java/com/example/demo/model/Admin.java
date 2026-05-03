@@ -14,7 +14,7 @@ public class Admin {
     }
 
     public void setLastName(String lastName) {
-        lastName = lastName;
+        this.lastName = lastName;
     }
 
     public String getFirstName() {
@@ -22,7 +22,7 @@ public class Admin {
     }
 
     public void setFirstName(String firstName) {
-        firstName = firstName;
+        this.firstName = firstName;
     }
 
     public String getMail() {
@@ -30,7 +30,7 @@ public class Admin {
     }
 
     public void setMail(String mail) {
-        Mail = mail;
+        this.Mail = mail;
     }
 
     public String getAdress() {
@@ -38,7 +38,7 @@ public class Admin {
     }
 
     public void setAdress(String adress) {
-        Adress = adress;
+        this.Adress = adress;
     }
 
     public long getPersonnummer() {
@@ -54,16 +54,16 @@ public class Admin {
     }
 
     public void setAdminID(long adminID) {
-        AdminID = adminID;
+        this.AdminID = adminID;
     }
 
     public Admin(String firstName, String lastName, String mail, String adress, long personnummer, long adminID) {
-        firstName = firstName;
-        lastName = lastName;
-        Mail = mail;
-        Adress = adress;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.Mail = mail;
+        this.Adress = adress;
         this.personnummer = personnummer;
-        AdminID = adminID;
+        this.AdminID = adminID;
     }
 
     public Admin(){

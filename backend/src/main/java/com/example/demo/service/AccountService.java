@@ -1,34 +1,41 @@
 package com.example.demo.service;
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
 
 import com.example.demo.model.Account;
+import com.example.demo.model.Transaction;
 import com.example.demo.repository.AccountRepository;
+import com.example.demo.repository.TransactionRepository;
 import org.springframework.stereotype.Service;
 
 @Service
 public class AccountService {
 
     private final AccountRepository accountRepository;
+    private final TransactionRepository transactionRepository;
 
-    public AccountService(AccountRepository accountRepository) {
+    public AccountService(AccountRepository accountRepository, TransactionRepository transactionRepository) {
         this.accountRepository = accountRepository;
+        this.transactionRepository = transactionRepository;
     }
-
     //variable name could change "findByAccountNumber"
-    public BigDecimal deposit(String accountNumber, BigDecimal amount){
-        //This gives us acces to the information of the account, stored in variable "account"
+    public BigDecimal deposit(String accountNumber, BigDecimal amount) {
         Account account = accountRepository.findByAccountNumber(accountNumber);
 
-        //Here is where the calculation is happening, getting the balance from set account doing the transaction and adding
-        //the deposit amount to the account balance. Everything is stored in the newBalance Variable
         BigDecimal newBalance = account.getBalance().add(amount);
-
         account.setBalance(newBalance);
 
-        //Here we save the new balance. updateBalance method comes from the AccountRepository
         accountRepository.updateBalance(account.getAccountNumber(), newBalance);
 
-       return newBalance;
+        // Logga transaktionen
+        Transaction transaction = new Transaction();
+        transaction.setAccountNumber(accountNumber);
+        transaction.setAmount(amount);
+        transaction.setTimeStamp(LocalDateTime.now());
+        transaction.setType(Transaction.TransactionType.DEPOSIT);
+        transactionRepository.save(transaction);
+
+        return newBalance;
     }
 
 

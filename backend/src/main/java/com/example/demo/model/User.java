@@ -23,7 +23,7 @@ public class User {
     }
 
     public void setFirstName(String firstName) {
-        firstName = firstName;
+        this.firstName = firstName;
     }
 
     public String getLastName() {
@@ -31,7 +31,7 @@ public class User {
     }
 
     public void setLastName(String lastName) {
-        lastName = lastName;
+        this.lastName = lastName;
     }
 
     public String getMail() {
@@ -39,7 +39,7 @@ public class User {
     }
 
     public void setMail(String mail) {
-        Mail = mail;
+        this.Mail = mail;
     }
 
     public String getAdress() {
@@ -47,7 +47,7 @@ public class User {
     }
 
     public void setAdress(String adress) {
-        Adress = adress;
+        this.Adress = adress;
     }
 
     public long getPersonnummer() {
@@ -59,10 +59,10 @@ public class User {
     }
 
     public User(String firstName, String lastName, String mail, String adress, long personnummer) {
-        firstName = firstName;
-        lastName = lastName;
-        Mail = mail;
-        Adress = adress;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.Mail = mail;
+        this.Adress = adress;
         this.personnummer = personnummer;
     }
 
